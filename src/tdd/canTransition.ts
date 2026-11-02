@@ -6,8 +6,9 @@ export type Stage =
   | "Lost"
   | "Delayed";
 
+const CLOSED_STAGES: Stage[] = ["Won", "Lost"];
+
 export function canTransition(from: Stage, to: Stage): boolean {
   if (from === to) return false;
-  if (from === "Won" || from === "Lost") return false;
-  return true;
+  return !CLOSED_STAGES.includes(from);
 }
