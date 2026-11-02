@@ -1,7 +1,11 @@
-export function isContactValid(_c: {
+export function isContactValid(c: {
   firstName: string;
   lastName: string;
   accountManagerId: number | null;
 }): boolean {
-  return true;
+  return (
+    c.firstName.trim() !== "" &&
+    c.lastName.trim() !== "" &&
+    c.accountManagerId != null
+  );
 }
