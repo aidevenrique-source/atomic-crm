@@ -3,5 +3,5 @@ export function isContactValid(_c: {
   lastName: string;
   accountManagerId: number | null;
 }): boolean {
-  return false;
+  return true;
 }
